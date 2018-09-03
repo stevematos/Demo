@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     {% block extrastatic %}
     {%  endblock %}
+    <link rel="icon" href="{% static 'icon/icono.png' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>{% block titulo %}Documento{% endblock %}</title>
 </head>
@@ -43,8 +44,11 @@
     <div class="container">
     {% block contenido %}
     {% endblock %}
-    </div>
     {% block footer %}
+        <h5>Steve Sader Matos Manguinuri</h5>
+        <h5>Correo: steve.matos@unmsm.edu.pe o s.s.m.m_98@hotmail.com</h5>
+        <h5>Celular:936015877</h5>
     {% endblock %}
+     </div>
 </body>
 </html>

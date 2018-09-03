@@ -31,7 +31,8 @@
                 <td>{{persona.sexo}}</td>
                 <td>{{persona.fecha_nac}}</td>
                 <td>{{persona.correo_electronico}}</td>
-                <td>{{persona.categoria.name}}</td>
+                <td><div><img src="{{persona.categoria.image}}"></div>
+                    <div>{{ persona.categoria.name }}</div></td>
                 <td>
                     <a class="btn btn-primary" href="{% url 'persona:update_persona' persona.id%}">Editar</a>
                     <a class="btn btn-danger" href="{% url 'persona:delete_persona' persona.id %}">Eliminar</a>

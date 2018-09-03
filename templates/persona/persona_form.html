@@ -1,9 +1,20 @@
 {% extends 'base/base.html' %}
+{% block extrastatic %}
+    <script type="text/javascript">
+        function limit_input(n) {
+            var field = document.getElementById("number_field");
+            var max_length = n;
+            if (field.value.length > max_length) {
+                field.value = field.value.slice(0, max_length);
+            }
+        }
+    </script>
+{% endblock %}
 
 {% block contenido %}
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type='submit' value="Save">Guardar</button>
+    <button type='submit' class='btn btn-primary' value="Save">Guardar</button>
 </form>
 {% endblock %}
