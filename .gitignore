@@ -1,0 +1,6 @@
+# Django
+.idea/
+
+# Environments
+.env
+env/
