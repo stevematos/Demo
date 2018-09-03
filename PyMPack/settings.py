@@ -25,7 +25,7 @@ SECRET_KEY = '+feu+7hj_djm##fy__v6pvbr_7vyxf#kmus&t4+f+jt%izsm*$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['demopympack.herokuapp.com',]
 
 
 # Application definition
