@@ -33,8 +33,8 @@
                 <td>{{persona.correo_electronico}}</td>
                 <td>{{persona.categoria.name}}</td>
                 <td>
-                    <a class="btn btn-primary" href="{% url 'persona:list_persona'%}">Editar</a>
-                    <a class="btn btn-danger" href="{% url 'persona:list_persona' %}">Eliminar</a>
+                    <a class="btn btn-primary" href="{% url 'persona:update_persona' persona.id%}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'persona:delete_persona' persona.id %}">Eliminar</a>
                 </td>
             </tr>
             {% endfor %}
@@ -44,4 +44,16 @@
             {% endif %}
         </tbody>
     </table>
+    <ul class="pager">
+        <li>
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+            </li>
+        <li>
+            {% if page_obj.has_next %}
+             <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}
+        </li>
+    </ul>
 {% endblock %}
